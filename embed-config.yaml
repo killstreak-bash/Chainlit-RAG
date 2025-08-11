@@ -1,0 +1,9 @@
+host: "127.0.0.1"
+port: 8088
+api_key: "token-ATRC324-IHL"
+gpu_memory_utilization: ".5"
+dtype: "half" 
+tensor_parallel_size: 2
+cpu_offload_gb: 3
+max_model_len: 20000
+trust_remote_code: True
