@@ -1,0 +1,20 @@
+vllm serve deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct --config model-config.yaml
+
+vllm serve Qwen/Qwen2.5-Coder-32B-Instruct-AWQ --config model-config.yaml
+
+vllm serve Qwen/Qwen3-Embedding-4B --config embed-config.yaml
+
+vllm serve Qwen/Qwen3-Reranker-4B --config reranker-config.yaml
+
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+CLI
+
+vllm embed model:
+
+PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True vllm serve Qwen/Qwen3-Embedding-4B --port 8088 --api-key token-ATRC324-IHL --gpu-memory-utilization .15 --tensor-parallel-size 2 --max_model_len 5000
+
+
+vllm llm chat bot:
+
+vllm serve deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct --port 8080 --api-key token-ATRC324-IHL --gpu-memory-utilization .725 --max_model_len 20000 --tensor-parallel-size 2 --trust-remote-code
