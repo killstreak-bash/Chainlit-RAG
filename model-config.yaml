@@ -1,0 +1,10 @@
+host: "127.0.0.1"
+port: 8080
+api_key: "token-ATRC324-IHL"
+gpu_memory_utilization: ".725" 
+data_parallel_size: 1
+tensor_parallel_size: 2
+pipeline_parallel_size: 1 
+max_model_len: 12500
+enable_expert_parallel: True
+trust_remote_code: True
